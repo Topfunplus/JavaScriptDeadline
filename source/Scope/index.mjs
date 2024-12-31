@@ -1,4 +1,4 @@
-// 1. Global Scope
+// 1. Global Scope 全局作用域
 var globalVar = 'I am a global variable'
 
 function globalScopeExample() {
@@ -7,7 +7,7 @@ function globalScopeExample() {
 
 globalScopeExample()
 
-// 2. Function Scope
+// 2. Function Scope 函数作用域
 function functionScopeExample() {
   var functionVar = 'I am a function variable'
   console.log(functionVar) // Accessible here
@@ -16,7 +16,7 @@ function functionScopeExample() {
 functionScopeExample()
 // console.log(functionVar); // Uncaught ReferenceError: functionVar is not defined
 
-// 3. Block Scope (with let and const)
+// 3. Block Scope (with let and const)  快作用域
 if (true) {
   let blockVar = 'I am a block variable'
   const blockConst = 'I am a block constant'
@@ -27,7 +27,7 @@ if (true) {
 // console.log(blockVar); // Uncaught ReferenceError: blockVar is not defined
 // console.log(blockConst); // Uncaught ReferenceError: blockConst is not defined
 
-// 4. Lexical Scope (Closures)
+// 4. Lexical Scope (Closures)  词法作用域
 function outerFunction() {
   var outerVar = 'I am an outer variable'
 
@@ -41,7 +41,7 @@ function outerFunction() {
 const closureExample = outerFunction()
 closureExample() // Logs: I am an outer variable
 
-// 5. Module Scope (ES6 Modules)
+// 5. Module Scope (ES6 Modules)   模块作用域
 // In a module file (e.g., module.js):
 export const moduleVar = 'I am a module variable'
 
